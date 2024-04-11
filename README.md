@@ -1,2 +1,2 @@
 # TIC-TAC-TOE
-TIC TAC TOE Gama
+TIC TAC TOE Game
