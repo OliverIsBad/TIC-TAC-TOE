@@ -24,4 +24,17 @@ public class CheckWinCondition {
 
         return false; // No win condition 
     }
+    public boolean checkForDraw(int[][] board) {
+        // Check if any cell on the board is empty (contains 0)
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == 0) {
+                    return false; // There is an empty cell, game is not a draw
+                }
+            }
+        }
+
+        // All cells are filled and no win condition is met, game is a draw
+        return true;
+    }
 }
