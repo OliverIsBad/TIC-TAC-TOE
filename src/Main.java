@@ -7,6 +7,7 @@ public class Main {
         DrawElements draw = new DrawElements();
         ScanInput input = new ScanInput();
         startGame = input.startGame(startGame);
+        CheckWinCondition winCondition = new CheckWinCondition();
         
         
         while(startGame){
@@ -19,8 +20,12 @@ public class Main {
                 draw.setType(true);
             }else draw.setType(false);
 
+            if(winCondition.checkWinCondition(board.getBoard())){
+                startGame = false;
+            }
         }
         input.closeScanner();
+        System.out.println("Someone Won: Hurray!");
 
     }
 }

@@ -22,7 +22,7 @@ public class ScanInput {
             int num1 = scanner.nextInt();
             int num2 = scanner.nextInt();
             int[] arr = new int[2];
-            if(num1 < 3 || num2 < 3 && num1 > 1 || num2 > 1){
+            if(num1 <= 3 && num2 <= 3 && num1 >= 1 && num2 >= 1){
                 arr[0] = num1-1;
                 arr[1] = num2-1;
                 board.setLocation(arr);
