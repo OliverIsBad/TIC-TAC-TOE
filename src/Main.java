@@ -9,7 +9,7 @@ public class Main {
         startGame = input.startGame(startGame);
         CheckWinCondition winCondition = new CheckWinCondition();
         
-        
+        String[] players = input.getPlayerNames();
         while(startGame){
             //int [] location = input.setLocation();
             input.setLocation();
@@ -21,11 +21,16 @@ public class Main {
             }else draw.setType(false);
 
             if(winCondition.checkWinCondition(board.getBoard())){
+                
                 startGame = false;
             }
         }
         input.closeScanner();
-        System.out.println("Someone Won: Hurray!");
+
+        if(!draw.isType()){
+             System.out.println(players[1] + " Won: Hurray!");       
+        }else System.out.println(players[0] + " Won: Hurray!");
+
 
     }
 }

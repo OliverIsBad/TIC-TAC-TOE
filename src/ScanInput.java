@@ -35,6 +35,17 @@ public class ScanInput {
         setLocationBool = false;
     }
 
+    public String[] getPlayerNames(){
+        String[] players = new String[2];
+        System.out.println("Player 1, choose a name:");
+        String name1 = scanner.next();
+        System.out.println("Player 2, choose a name:");
+        String name2 = scanner.next();
+
+        players[0] = name1;
+        players[1] = name2;
+        return players;
+    }
     public void closeScanner(){
         scanner.close();
     }
