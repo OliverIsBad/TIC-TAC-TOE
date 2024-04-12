@@ -5,8 +5,8 @@ public class Main {
         Board logic = Board.getInstance();
         DrawElements draw = new DrawElements();
         ScanInput input = new ScanInput();
-        input.logic();
-        logic.insert(2, 1, 0);
+        int [] location = input.setLocation();
+        logic.insert(1,location[0], location[1]);
         draw.drawBoard();
         System.out.println(" ");
         
