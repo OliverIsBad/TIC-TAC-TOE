@@ -2,11 +2,13 @@ public class Board {
     private static Board instance = null; // Static instance variable
 
     private int[][] board; // Board array
+    private int[]   location;
 
     // Private constructor to prevent external instantiation
     private Board() {
         // Initialize the board
         this.board = new int[][]{{0,0,0},{0,0,0},{0,0,0}};
+        this.location = new int [2];
     }
 
     // Static method to get the singleton instance
@@ -18,8 +20,12 @@ public class Board {
     }
 
     // Insert method to update the board
-    public void insert(int type, int x, int y) {
-        board[x][y] = type;
+    public void insert(boolean type, int x, int y) {
+        int num;
+        if (type == false){
+            num = 1;
+        }else num = 2;
+        board[x][y] = num;
     }
 
     // Getters for board dimensions
@@ -34,6 +40,16 @@ public class Board {
     // Getter for the board
     public int[][] getBoard() {
         return board;
+    }
+
+    
+
+    public int[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(int[] location) {
+        this.location = location;
     }
 
     // Method to print the board

@@ -1,5 +1,9 @@
 public class DrawElements {
     
+    boolean type; // false = circle, true = x
+    DrawElements(){
+        this.type = false;
+    }
     String[][] board = {
         {" ", " ", " ", "|", " ", " ", " ", "|", " ", " ", " "},
         {"-", "-", "-", "+", "-", "-", "-", "+", "-", "-", "-"},
@@ -25,4 +29,12 @@ public class DrawElements {
             System.out.println();
         }
     }
+    public boolean isType() {
+        return type;
+    }
+    public void setType(boolean type) {
+        this.type = type;
+    }
+
+    
 }
