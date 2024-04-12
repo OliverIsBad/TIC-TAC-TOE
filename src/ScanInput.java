@@ -16,7 +16,6 @@ public class ScanInput {
         } else return false;
     }
     public void setLocation(){
-        scanner = new Scanner(System.in);
         Board board = Board.getInstance();
         while(!setLocationBool){
             System.out.println("First num is the Y Location and the second is X: ");
@@ -33,7 +32,7 @@ public class ScanInput {
                 System.out.println("Value is not in the Grid");
             }
         }
-         
+        setLocationBool = false;
     }
 
     public void closeScanner(){
