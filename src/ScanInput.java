@@ -16,8 +16,23 @@ public class ScanInput {
      * @return Returns true if the user input is 1 
      */
     public boolean startGame(){
-        System.out.println("type 1 to start the game.");
-        System.out.println("type 2 to end the game.");
+        System.out.println();
+        System.out.println(" ______  __ _____   ______ __   ______   ______ _____  _____");
+        System.out.println("/_  __/  _/ ____/  /_  __/   | / ____/  /_  __/ __ \\/ ____/");
+        System.out.println("  / /  / // /        / / / /| |/ /        / / / / / / __/   ");
+        System.out.println(" / / _/ // /___     / / / ___ / /___     / / / /_/ / /___   ");
+        System.out.println("/_/ /___/\\____/    /_/ /_/  |_\\____/    /_/  \\____/_____/  ");
+
+
+        System.out.println("");
+        System.out.println("          +-------------------------------------+");
+        System.out.println("          |            Welcome to               |");
+        System.out.println("          |           Tic Tac Toe!              |");
+        System.out.println("          |                                     |");
+        System.out.println("          |  Enter '1' to start a new game.     |");
+        System.out.println("          |  Enter '2' to end the game.         |");
+        System.out.println("          +-------------------------------------+");
+
         int num = 0;
         try{
             num = scanner.nextInt();
@@ -39,7 +54,9 @@ public class ScanInput {
         
         while(!setLocationBool){
             try{
-                System.out.println("First num is the Y Location and the second is X: ");
+                System.out.println("  +-----------------------------------------------------+");
+                System.out.println("  | Please enter the row (Y) and column (X) coordinates:|");
+                System.out.println("  +-----------------------------------------------------+");
                 int num1 = scanner.nextInt();
                 int num2 = scanner.nextInt();
                 int[] arr = new int[2];
@@ -50,10 +67,14 @@ public class ScanInput {
                     setLocationBool = true;
                 }
                 else{
-                    System.out.println("Value is not in the Grid");
+                    System.out.println("               +--------------------------+");
+                    System.out.println("               | Value is not in the Grid |");
+                    System.out.println("               +--------------------------+");
                 }
             }catch (InputMismatchException e) {
-                System.out.println("Please enter valid integers.");
+                System.out.println("             +------------------------------+");
+                System.out.println("             | Please enter valid integers. |");
+                System.out.println("             +------------------------------+");
                 scanner.nextLine(); // Consume the invalid input
             }
             
@@ -66,9 +87,13 @@ public class ScanInput {
      */
     public String[] getPlayerNames(){
         String[] players = new String[2];
-        System.out.println("Player 1, choose a name:");
+        System.out.println("           +-----------------------------------+");
+        System.out.println("           | Player 1, please enter your name: |");
+        System.out.println("           +-----------------------------------+");
         String name1 = scanner.next();
-        System.out.println("Player 2, choose a name:");
+        System.out.println("           +-----------------------------------+");
+        System.out.println("           | Player 2, please enter your name: |");
+        System.out.println("           +-----------------------------------+");
         String name2 = scanner.next();
 
         players[0] = name1;
