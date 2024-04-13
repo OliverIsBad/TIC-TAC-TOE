@@ -4,10 +4,17 @@ public class Main {
         Board board = Board.getInstance();
         DrawElements draw = new DrawElements();
         ScanInput input = new ScanInput();
-        startGame = input.startGame(startGame);
+        String[] players = new String[2];
+
         CheckWinCondition winCondition = new CheckWinCondition();
+        if(!startGame){
+            startGame = input.startGame();
+        }
         
-        String[] players = input.getPlayerNames();
+        if(startGame){
+            players = input.getPlayerNames();
+        }
+        
         while(startGame){
             input.setLocation();
             board.insert(draw.isType(), board.getLocation()[0], board.getLocation()[1]);
