@@ -1,4 +1,15 @@
+/**
+ * Checks for win conditions
+ * @author Oliver Mann
+ */
+
 public class CheckWinCondition {
+
+    /**
+     * Checks if the game is won
+     * @param arr The array used to check if the game is won
+     * @return True if the game is won
+     */
     public boolean checkWinCondition(int[][] arr) {
         // Check horizontal wins
         for (int i = 0; i < 3; i++) {
@@ -24,6 +35,12 @@ public class CheckWinCondition {
 
         return false; // No win condition 
     }
+
+    /**
+     * Checks if the game ended in a draw
+     * @param board The array used to check if the game is a draw
+     * @return Returns true if the game is a draw
+     */
     public boolean checkForDraw(int[][] board) {
         // Check if any cell on the board is empty (contains 0)
         for (int i = 0; i < board.length; i++) {

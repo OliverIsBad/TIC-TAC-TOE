@@ -1,16 +1,19 @@
+/**
+ * Is used to draw the board on the screen
+ * @author Oliver Mann
+ */
 public class DrawElements {
     
     boolean type; // false = circle, true = x
     DrawElements(){
         this.type = false;
     }
-    public void drawCircle(){
-        System.out.println("o");
-    }
-    public void drawX(){
-        System.out.println("x");
-    }
-
+    /** 
+     * Prints the int array:
+     * 0 is interpreted as " "
+     * 1 is interpreted as "o"
+     * 2 is interpreted as "x"
+     */
     public void drawBoard(){
         Board logic = Board.getInstance();
         int[][] board = logic.getBoard();
@@ -38,12 +41,19 @@ public class DrawElements {
     System.out.println("+---+---+---+"); // Frame after each row
 }
     }
+    /**
+     * Returns the type
+     * @return True or False
+     */
     public boolean isType() {
         return type;
     }
+    /**
+     * Sets the type
+     * @param type The boolean type
+     */
     public void setType(boolean type) {
         this.type = type;
     }
-
     
 }

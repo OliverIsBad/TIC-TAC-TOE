@@ -1,11 +1,20 @@
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Handles all the user input
+ * @author Oliver Mann
+  */
 public class ScanInput {
     Scanner scanner = new Scanner(System.in);
     DrawElements draw = new DrawElements();
     boolean setLocationBool = false;
 
+    /**
+     * Is used to start the game
+     * 
+     * @return Returns true if the user input is 1 
+     */
     public boolean startGame(){
         System.out.println("type 1 to start the game.");
         System.out.println("type 2 to end the game.");
@@ -22,6 +31,9 @@ public class ScanInput {
         } else return false;  
     }
 
+    /**
+     * Sets the desired location of a user input on the board
+     */
     public void setLocation(){
         Board board = Board.getInstance();
         
@@ -49,6 +61,9 @@ public class ScanInput {
         setLocationBool = false;
     }
 
+    /**
+     * Takes the input for the desired player names
+     */
     public String[] getPlayerNames(){
         String[] players = new String[2];
         System.out.println("Player 1, choose a name:");
@@ -60,6 +75,9 @@ public class ScanInput {
         players[1] = name2;
         return players;
     }
+    /**
+     * Closes the scanner
+     */
     public void closeScanner(){
         scanner.close();
     }
