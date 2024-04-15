@@ -27,7 +27,7 @@ public class ScanInput {
         System.out.println("");
         System.out.println("          +-------------------------------------+");
         System.out.println("          |            Welcome to               |");
-        System.out.println("          |           Tic Tac Toe!              |");
+        System.out.println("          |           Tic Tac Toe asdfjklasdf!              |");
         System.out.println("          |                                     |");
         System.out.println("          |  Enter '1' to start a new game.     |");
         System.out.println("          |  Enter '2' to end the game.         |");
